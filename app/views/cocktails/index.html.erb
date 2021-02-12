@@ -1,0 +1,21 @@
+<ul>
+  <% @cocktails.each do |cocktail| %>
+    <li><%= cocktail.name %></li>
+    <%= link_to "details of cocktail",  cocktail_path(cocktail) %>
+  <% end %>
+</ul>
+
+
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+<%= link_to 'new cocktail', new_cocktail_path, class: "btn" %>
+    </div>
+  </body>
+
